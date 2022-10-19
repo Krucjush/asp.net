@@ -1,0 +1,19 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<form action="Calculator">
+    <label for="number">a</label>
+    <input type="number" name="a" required />
+    <label for="number">b</label>
+    <input type="number" name="b" required />
+    <select name="op">
+        <option value="add">Dodaj</option>
+        <option value="sub">Odejmij</option>
+        <option value="mul">Pomnoz</option>
+        <option value="div">Podziel</option>
+    </select>
+    <button type="submit">Oblicz</button>
+</form>
+<p>@ViewBag.message</p>
