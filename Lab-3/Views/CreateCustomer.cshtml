@@ -1,0 +1,21 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<form action="CreateCustomer">
+    <label for="UserName">Twoje imie</label>
+    <input type="text" name="UserName" required />
+    <label for="Email">Twój adres email</label>
+    <input type="email" name="Email" required />
+    <label for="Age">Twój wiek</label>
+    <input type="number" name="Age" />
+    <label for="PhoneNumber">Twój numer telefonu</label>
+    <input type="tel" name="PhoneNumber" />
+    <label for="Address">Twój adres</label>
+    <input type="text" name="Address" />
+    <label for="ZipCode">Twój kod zip</label>
+    <input type="text" name="ZipCode" />
+    <button type="submit">Oblicz</button>
+</form>
+<p>@ViewBag.message</p>
