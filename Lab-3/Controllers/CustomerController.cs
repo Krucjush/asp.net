@@ -32,9 +32,22 @@ namespace Lab_3.Controllers
             }
         };
         [HttpGet]
-        public string CreateCustomers()
+        public IActionResult CreateCustomer()
         {
             return View();
+        }
+        [HttpPost]
+        public ViewResult CreateCustomer(Customer customer)
+        {
+            if (ModelState.IsValid)
+            {
+                _customers.Add(customer);
+                return View();
+            }
+            else
+            {
+                return View();
+            }
         }
     }
 }

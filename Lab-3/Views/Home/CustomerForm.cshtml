@@ -1,0 +1,52 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<form action="CustomerForm">
+    <div validation-summary="All"></div>
+    <div>
+        <label for="UserName">Twoje imię</label>
+        <div>
+            <span validation-for="UserName" class="text-danger"></span>
+        </div>
+        <input class="form-control" type="text" for="UserName" required/>
+    </div>
+    <div>
+        <label for="Email">Twój adress email</label>
+        <div>
+            <span validation-for="Email" class="text-danger"></span>
+        </div>
+        <input class="form-control" type="email" for="Email" required/>
+    </div>
+    <div>
+        <label for="Age">Twój wiek</label>
+        <div>
+            <span validation-for="Age" class="text-danger"></span>
+        </div>
+        <input class="form-control" type="number" for="Age" />
+    </div>
+    <div>
+        <label for="PhoneNumber">Twój numer telefonu</label>
+        <div>
+            <span validation-for="PhoneNumber" class="text-danger"></span>
+        </div>
+        <input class="form-control" type="text" for="Age" />
+    </div>
+    <div>
+        <label for="Address">Twój adres</label>
+        <div>
+            <span validation-for="Address" class="text-danger"></span>
+        </div>
+        <input class="form-control" type="text" for="Address" />
+    </div>
+    <div>
+        <label for="ZipCode">Twój kod zip</label>
+        <div>
+            <span validation-for="ZipCode" class="text-danger"></span>
+        </div>
+        <input class="form-control" type="text" for="ZipCode" />
+    </div>
+    <button type="submit">Oblicz</button>
+</form>
+<p>@ViewBag.message</p>

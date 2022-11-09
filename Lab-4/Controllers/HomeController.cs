@@ -1,8 +1,8 @@
-﻿using Lab_3.Models;
+﻿using Lab_4.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace Lab_3.Controllers
+namespace Lab_4.Controllers
 {
     public class HomeController : Controller
     {
@@ -23,25 +23,12 @@ namespace Lab_3.Controllers
             return View();
         }
 
-        public IActionResult CustomerForm(Customer customer)
-        {
-            //if (customer.UserName == null || customer.Email == null)
-            //{
-            //    Response.StatusCode = 400;
-            //    return View();
-            //}
-            //else
-            return View();
-        }
-        public IActionResult CreateCustomer(Customer customer)
-        {
-            return View();
-        }
-
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+        private static AppDbContext context = new AppDbContext();
+        
     }
 }

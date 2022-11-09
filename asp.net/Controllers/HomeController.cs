@@ -55,10 +55,6 @@ namespace FirstApp.Controllers
                 return View();
             }
         }
-        public IActionResult BirthForm()
-        {
-            return View();
-        }
 
         public IActionResult Calculator(CalculatorInfo calculatorInfo)
         {
@@ -92,10 +88,6 @@ namespace FirstApp.Controllers
                 ViewBag.message = $"{calculatorInfo.A} % {calculatorInfo.B} = {calculatorInfo.A % calculatorInfo.B}";
                 return View();
             }
-            return View();
-        }
-        public IActionResult CalculatorForm()
-        {
             return View();
         }
 
